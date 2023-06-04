@@ -1,0 +1,1 @@
+Folder styles menampung seluruh berkas CSS yang akan kita buat. Banyak ataupun sedikit, kita akan menyimpannya pada folder ini.

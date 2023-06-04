@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+/* App bar */
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: #db0000;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -300px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0px;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 16px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/* Jumbotron */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+  text-align: center;
+  width: 100%;
+  /* background-image: url("../public/heros/hero-image_4.jpg");
+  background-position: center;
+  background-color: green;
+  background-size: cover; */
+}
+
+/* .hero-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.45;
+} */
+
+.hero-inner {
+  /* position: relative; */
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero-title {
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
+  text-shadow: 1px 1px black;
+}
+
+.hero-tagline {
+  color: white;
+  font-weight: bolder;
+  margin-top: 16px;
+  font-size: 18px;
+  text-shadow: 1px 1px black;
+}
+
+/* Main Content */
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+
+/* restaurants */
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+/* restaurant Item */
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-item__header {
+  position: relative;
+}
+
+.restaurant-item .restaurant-item__header #restaurant-item__header__poster {
+  width: 100%;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+.restaurant-item
+  .restaurant-item__header
+  .restaurant-item__header__rating
+  .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.restaurant-item .restaurant-item__content h3 a {
+  color: #db0000;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.restaurant-item .restaurant-item__content h4 {
+  margin: 16px 0 8px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+/* restaurant */
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+h2.restaurant__title {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+img.restaurant__poster {
+  max-width: 80vw;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.restaurant__info {
+  margin-top: 16px;
+  margin-bottom: 4px;
+  display: grid;
+  gap: 4px;
+}
+
+.restaurant__info h3 {
+  text-align: center;
+}
+
+.restaurant .restaurant__info h4 {
+  margin: 16px 0;
+}
+
+.restaurant-overview {
+  margin-bottom: 4px;
+}
+
+/* restaurant-menu-foods */
+
+.restaurant-menu-foods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 16px 0 32px 0;
+}
+
+.foods {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+/* restaurant-menu-drinks */
+
+.restaurant-menu-drinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 16px 0 32px 0;
+}
+
+.drinks {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+}
+
+/* customer-review */
+
+.customer-review {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 16px 0 32px 0;
+}
+
+.review-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* Like */
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  padding: 16px;
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+footer p a {
+  color: #db0000;
+  text-decoration: none;
+}
+
+#about {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  margin-bottom: 6px;
+}
+
+.social-media-list {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.social-media-item {
+  display: inline-block;
+  margin: 0 1em;
+  font-size: 14px;
+}
+
+.social-media-item a {
+  display: inline-block;
+  padding: 1.3em;
+  text-decoration: none;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  transition: 0.3s opacity;
+}
+
+.social-media-item a:hover {
+  opacity: 0.5;
+}
+
+.social-media-item a:focus {
+  border: 5px solid black;
+  border-radius: 5px;
+}
+
+.social-media-item a p {
+  color: black;
+  font-weight: bold;
+}
+
+.fa-github {
+  padding: 5px 7px;
+  color: #fff;
+  background-color: rgb(30, 48, 80);
+}
+
+.fa-linkedin {
+  padding: 5px 7px;
+  color: #fff;
+  background-color: #0073a4;
+}
