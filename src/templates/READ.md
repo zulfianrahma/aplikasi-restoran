@@ -1,0 +1,1 @@
+Folder templates digunakan untuk menyimpan berkas index.html di mana kita menuliskan struktur HTML dari aplikasi kita.
