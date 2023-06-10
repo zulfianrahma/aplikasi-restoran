@@ -1,4 +1,4 @@
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 700px) {
   .app-bar {
     grid-template-columns: 1fr auto;
     padding: 8px 32px;
@@ -47,18 +47,14 @@
   }
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 800px) {
   .hero {
     background-image: url("../public/heros/hero-image-small.jpg");
     background-position: center;
     background-color: green;
-    background-size: 480px 320px;
-    width: auto;
+    background-size: cover;
+    width: 100vw;
     height: auto;
-    max-width: 480px;
-    max-height: 320px;
-    margin-right: auto;
-    margin-left: auto;
   }
 }
 
@@ -72,7 +68,7 @@
     background-position: center;
     background-color: green;
     background-size: contain;
-    width: 100%;
+    width: 100vw;
   }
 
   h2.restaurant__title {
